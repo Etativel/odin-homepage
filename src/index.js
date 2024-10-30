@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   textLoadAnimation(socials, 500);
   textLoadAnimation(subIntroText, 400);
   textLoadAnimation(introText, 300);
+  setInterval(updateText, 2000);
 });
 
 function backgroundImageLoadAnimation() {
@@ -33,4 +34,18 @@ function translateDownAnimation(elem, duration) {
   setTimeout(() => {
     elem.classList.add("scale-down");
   }, duration);
+}
+
+const textArray = ["Graphic Designer", "Front-end Developer", "Art Enthusiast"];
+let currentIndex = 0;
+const textElement = document.querySelector(".skills");
+
+function updateText() {
+  textElement.style.opacity = "0";
+
+  setTimeout(() => {
+    currentIndex = (currentIndex + 1) % textArray.length;
+    textElement.textContent = textArray[currentIndex];
+    textElement.style.opacity = "1";
+  }, 500);
 }
