@@ -154,10 +154,12 @@ header.img-load {
 /* Education */
 .education {
   display: flex;
-  height: 600px;
+  height: 300px;
+  /* width: 100%; */
   margin: 0px 240px 0px;
   padding: 24px;
   margin-bottom: 32px;
+  background-color: aqua;
 }
 
 /* Projects */
@@ -180,7 +182,7 @@ header.img-load {
 .project-card {
   height: 90vh;
   width: 100%;
-  background-color: black;
+  background-color: blue;
   opacity: 0%;
   /* border-radius: 12px; */
   /* transform: scale(1); */
@@ -206,12 +208,14 @@ header.img-load {
 }
 
 .p-title {
-  font-size: 32px;
+  font-size: 34px;
   font-family: trends;
+  /* text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black; */
 }
 
 .p-subtitle {
-  font-size: 18px;
+  font-size: 16px;
   color: gray;
   font-family: roboto-regular;
 }
@@ -239,6 +243,7 @@ header.img-load {
 
 /* Media queries */
 @media (max-width: 600px) {
+  .education,
   .projects,
   header,
   nav {
@@ -296,9 +301,39 @@ header.img-load {
     font-size: 1rem;
     width: 300px;
   }
+  /* Projects */
+  .projects {
+    gap: 24px;
+    padding-bottom: 0px;
+  }
+  .project-card {
+    height: 60vh;
+    opacity: 0%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.5s ease;
+  }
+  .p-text-container {
+    width: 300px;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  .p-title {
+    font-size: 34px;
+  }
+
+  .p-subtitle {
+    font-size: 16px;
+    color: white;
+    font-family: roboto-regular;
+  }
 }
 
 @media (min-width: 600px) and (max-width: 1000px) {
+  .education,
   .projects,
   header,
   nav {
@@ -320,6 +355,7 @@ header.img-load {
 }
 
 @media (min-width: 1000px) and (max-width: 1400px) {
+  .education,
   header,
   nav {
     margin: 0px 100px 0px;
