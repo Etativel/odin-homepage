@@ -13,10 +13,4 @@ export default function startAnimation() {
   animate.textLoad(subIntroText, 400);
   animate.textLoad(introText, 300);
   setInterval(animate.changeText, 2000);
-
-  let i = 400;
-  projects.forEach((project) => {
-    animate.projects(project, i);
-    i += 100;
-  });
 }

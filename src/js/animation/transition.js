@@ -17,16 +17,10 @@ const animate = (() => {
     }, duration);
   }
 
-  function projects(elem, duration) {
-    setTimeout(() => {
-      elem.classList.add("showed");
-    }, duration);
-  }
-
   const textArray = [
     "Graphic Designer",
     "Front-end Developer",
-    "Art Enthusiast",
+    "Tech Enthusiast",
   ];
   let currentIndex = 0;
   const textElement = document.querySelector(".skills");
@@ -40,12 +34,42 @@ const animate = (() => {
       textElement.style.opacity = "1";
     }, 500);
   }
+
+  function textWave(elem) {
+    const string = elem.textContent.split("");
+    console.log(string);
+    const container = document.createElement("span");
+    elem.textContent = "";
+    for (let i of string) {
+      const word = document.createElement("span");
+      word.classList.add("wave");
+      word.textContent = i;
+      elem.appendChild(word);
+    }
+  }
+  function intersectionAnimate(threshold, items) {
+    const intersectionCallback = (entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("showed");
+        }
+      }
+    };
+
+    const observer = new IntersectionObserver(intersectionCallback, {
+      threshold: threshold,
+    });
+    for (const item of items) {
+      observer.observe(item);
+    }
+  }
   return {
     backgroundImage,
     textLoad,
     navigation,
-    projects,
     changeText,
+    textWave,
+    intersectionAnimate,
   };
 })();
 
