@@ -7,6 +7,7 @@ import { animate } from "./js/animation/transition.js";
 const elements = {
   header: document.querySelector("header"),
   dummyProject01: document.querySelector(".project-1"),
+  dummyProject02: document.querySelector(".project-2"),
   projects: document.querySelectorAll(".project-card"),
 };
 
@@ -19,3 +20,4 @@ document.addEventListener("DOMContentLoaded", () => {
 // Attaching background image for header
 attachImage.backgroundImage(elements.header, loadImage().profilePict);
 attachImage.backgroundImage(elements.dummyProject01, loadImage().ibmProject);
+attachImage.backgroundImage(elements.dummyProject02, loadImage().pixLab);
