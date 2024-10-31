@@ -13,7 +13,7 @@ const elements = {
 
 document.addEventListener("DOMContentLoaded", () => {
   startAnimation();
-  animate.intersectionAnimate(0.2, elements.projects);
+  animate.intersectionAnimate(0.4, elements.projects);
   // animate.textWave(document.querySelector(".sub-introduction"));
 });
 
