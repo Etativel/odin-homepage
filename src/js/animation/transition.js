@@ -67,6 +67,27 @@ const animate = (() => {
     }
   }
 
+  function intersectionAnimateSingle(
+    threshold,
+    itemToLookAt,
+    classname,
+    itemToAnimate
+  ) {
+    const intersectionCallback = (entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          itemToAnimate.classList.add(`${classname}`);
+        }
+      }
+    };
+
+    const observer = new IntersectionObserver(intersectionCallback, {
+      threshold: threshold,
+    });
+
+    observer.observe(itemToLookAt);
+  }
+
   // function intersectionAnimate(
   //   threshold,
   //   itemToAnimate,
@@ -106,6 +127,7 @@ const animate = (() => {
     changeText,
     textWave,
     intersectionAnimate,
+    intersectionAnimateSingle,
   };
 })();
 

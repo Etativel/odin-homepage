@@ -14,15 +14,23 @@ const elements = {
   presentationC2: document.querySelector(".ep2"),
   gifContainer: document.querySelector(".gif-container"),
   educationContainer: document.querySelector(".education"),
+  eduTextContainer: document.querySelector(".education-text"),
 };
 
 document.addEventListener("DOMContentLoaded", () => {
   startAnimation();
   animate.intersectionAnimate(0.4, elements.projects, "showed");
-  animate.intersectionAnimate(
-    0.1,
-    elements.gifContainer,
-    "translateY-transition"
+  animate.intersectionAnimateSingle(
+    0.3,
+    elements.educationContainer,
+    "translateX-transition",
+    elements.gifContainer
+  );
+  animate.intersectionAnimateSingle(
+    0.3,
+    elements.educationContainer,
+    "translateX-transition",
+    elements.eduTextContainer
   );
   // animate.textWave(document.querySelector(".sub-introduction"));
 });
