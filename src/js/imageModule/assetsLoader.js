@@ -3,13 +3,18 @@ import IBMCarbonReduced from "../../assets/dummy-projects/IBMCarbon2.png";
 import IBMCarbonOrigin from "../../assets/dummy-projects/IBMCarbon3.png";
 import PixLab from "../../assets/dummy-projects/pixLab3.png";
 import PixLabReducee from "../../assets/dummy-projects/pixLabOpac.png";
-
+import vid from "../../assets/video/video.mp4";
+import presentation1 from "../../assets/photos/presentation.png";
+import presentation2 from "../../assets/photos/presentation2.jpg";
 function loadImage() {
   const isHugeScreen = window.matchMedia("(min-width: 1500px)").matches;
   return {
     profilePict: profilePict,
     ibmProject: isHugeScreen ? IBMCarbonOrigin : IBMCarbonReduced,
     pixLab: isHugeScreen ? PixLab : PixLabReducee,
+    eduVid: vid,
+    presentation1: presentation1,
+    presentation2: presentation2,
   };
 }
 

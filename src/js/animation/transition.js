@@ -47,11 +47,11 @@ const animate = (() => {
       elem.appendChild(word);
     }
   }
-  function intersectionAnimate(threshold, items) {
+  function intersectionAnimate(threshold, items, classname) {
     const intersectionCallback = (entries) => {
       for (const entry of entries) {
         if (entry.isIntersecting) {
-          entry.target.classList.add("showed");
+          entry.target.classList.add(`${classname}`);
         }
       }
     };
@@ -59,10 +59,46 @@ const animate = (() => {
     const observer = new IntersectionObserver(intersectionCallback, {
       threshold: threshold,
     });
-    for (const item of items) {
+
+    const elements = items instanceof Element ? [items] : items;
+
+    for (const item of elements) {
       observer.observe(item);
     }
   }
+
+  // function intersectionAnimate(
+  //   threshold,
+  //   itemToAnimate,
+  //   classname,
+  //   itemToLookAt
+  // ) {
+  //   const intersectionCallback = (entries) => {
+  //     for (const entry of entries) {
+  //       if (entry.isIntersecting) {
+  //         // Add the class to itemToAnimate when itemToLookAt is in view
+  //         if (Array.isArray(itemToAnimate)) {
+  //           itemToAnimate.forEach((item) => item.classList.add(classname));
+  //         } else {
+  //           itemToAnimate.classList.add(classname);
+  //         }
+  //       }
+  //     }
+  //   };
+
+  //   const observer = new IntersectionObserver(intersectionCallback, {
+  //     threshold: threshold,
+  //   });
+
+  //   // Handle single element or multiple elements for itemToLookAt
+  //   const elementsToObserve =
+  //     itemToLookAt instanceof Element ? [itemToLookAt] : itemToLookAt;
+
+  //   for (const item of elementsToObserve) {
+  //     observer.observe(item);
+  //   }
+  // }
+
   return {
     backgroundImage,
     textLoad,
