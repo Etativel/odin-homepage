@@ -31,6 +31,7 @@ const elements = {
   reactIconContainer: document.querySelector(".react-logo"),
   pythonIconContainer: document.querySelector(".python-logo"),
   skillsContainer: document.querySelector(".skills-image"),
+  favicon: document.querySelector(".favicon"),
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -90,6 +91,8 @@ elements.htmlIconContainer.src = loadImage().htmlLogo;
 elements.cssIconContainer.src = loadImage().cssLogo;
 elements.reactIconContainer.src = loadImage().reactLogo;
 elements.pythonIconContainer.src = loadImage().pythonLogo;
+
+elements.favicon.href = loadImage().favicon;
 // elements.instaFooter.src = loadImage().instagramIconBO;
 // elements.youtubeFooter.src = loadImage().youtubeIconBO;
 // elements.twitterFooter.src = loadImage().twitterIconBO;

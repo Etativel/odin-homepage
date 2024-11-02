@@ -21,6 +21,7 @@ import htmlLogo from "../../assets/icons/html-5.png";
 import cssLogo from "../../assets/icons/css-3.png";
 import jsLogo from "../../assets/icons/js.png";
 import pythonLogo from "../../assets/icons/python.png";
+import favicon from "../../assets/icons/flower.png";
 function loadImage() {
   const isHugeScreen = window.matchMedia("(min-width: 1500px)").matches;
   return {
@@ -43,6 +44,7 @@ function loadImage() {
     cssLogo,
     jsLogo,
     pythonLogo,
+    favicon,
   };
 }
 
