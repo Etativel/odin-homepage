@@ -1,6 +1,6 @@
 Live Preview:
 
--
+- https://etativel.github.io/odin-homepage/
 
 Source Used:
 
@@ -13,3 +13,5 @@ Source Used:
 - https://www.istockphoto.com/id/search/2/image-film?phrase=business+woman+presentation
 - https://uizard.io/templates/website-templates/e-commerce-website/
 - https://uizard.io/templates/website-templates/startup-landing-page/
+
+Thank's to [Kyson Dana](https://www.kysondana.com/) for the inspiring website
