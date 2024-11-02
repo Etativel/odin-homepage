@@ -10,23 +10,39 @@ import youtubeIcon from "../../assets/icons/youtube.png";
 import twitterIcon from "../../assets/icons/twitter.png";
 import instagramIcon from "../../assets/icons/instagram.png";
 import youtubeIconBO from "../../assets/icons/youtube-black-outline.png";
+import radPlant30 from "../../assets/dummy-projects/plant-30brigth.png";
+import radPlant60 from "../../assets/dummy-projects/plant-60.png";
+import lando30 from "../../assets/dummy-projects/lando-30.png";
+import lando60 from "../../assets/dummy-projects/lando-60.png";
 import twitterIconBO from "../../assets/icons/twitter-black-outline.png";
 import instagramIconBO from "../../assets/icons/instagram-black-outline.png";
+import reactLogo from "../../assets/icons/react.png";
+import htmlLogo from "../../assets/icons/html-5.png";
+import cssLogo from "../../assets/icons/css-3.png";
+import jsLogo from "../../assets/icons/js.png";
+import pythonLogo from "../../assets/icons/python.png";
 function loadImage() {
   const isHugeScreen = window.matchMedia("(min-width: 1500px)").matches;
   return {
-    profilePict: profilePict,
+    profilePict,
     ibmProject: isHugeScreen ? IBMCarbonOrigin : IBMCarbonReduced,
     pixLab: isHugeScreen ? PixLab : PixLabReducee,
+    radPlant: isHugeScreen ? radPlant30 : radPlant60,
+    lando: isHugeScreen ? lando30 : lando60,
     eduVid: vid,
-    presentation1: presentation1,
-    presentation2: presentation2,
-    instagramIcon: instagramIcon,
-    youtubeIcon: youtubeIcon,
-    twitterIcon: twitterIcon,
+    presentation1,
+    presentation2,
+    instagramIcon,
+    youtubeIcon,
+    twitterIcon,
     instagramIconBO,
     youtubeIconBO,
     twitterIconBO,
+    reactLogo,
+    htmlLogo,
+    cssLogo,
+    jsLogo,
+    pythonLogo,
   };
 }
 

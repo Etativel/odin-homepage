@@ -8,9 +8,10 @@ export default function startAnimation() {
   const header = document.querySelector("header");
 
   animate.navigation(navBar, 500);
-  animate.backgroundImage(header);
   animate.textLoad(socials, 500);
   animate.textLoad(subIntroText, 400);
   animate.textLoad(introText, 300);
+  // animate.backgroundImage(header);
+
   setInterval(animate.changeText, 2000);
 }

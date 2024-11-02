@@ -7,3 +7,5 @@ Source Used:
 - https://www.dafont.com/trends.font
 - https://www.pexels.com/photo/a-woman-in-red-long-sleeve-shirt-6476783/
 - https://www.istockphoto.com/id/search/2/image-film?phrase=business+woman+presentation
+- https://uizard.io/templates/website-templates/e-commerce-website/
+- https://uizard.io/templates/website-templates/startup-landing-page/
