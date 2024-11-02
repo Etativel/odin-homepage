@@ -15,6 +15,9 @@ const elements = {
   gifContainer: document.querySelector(".gif-container"),
   educationContainer: document.querySelector(".education"),
   eduTextContainer: document.querySelector(".education-text"),
+  instaLogo: document.querySelector(".ig-logo"),
+  twitterLogo: document.querySelector(".twit-logo"),
+  youtubeLogo: document.querySelector(".ytube-logo"),
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -41,5 +44,9 @@ attachImage.backgroundImage(elements.dummyProject01, loadImage().ibmProject);
 attachImage.backgroundImage(elements.dummyProject02, loadImage().pixLab);
 attachImage.backgroundImage(elements.presentationC1, loadImage().presentation1);
 attachImage.backgroundImage(elements.presentationC2, loadImage().presentation2);
+
+elements.instaLogo.src = loadImage().instagramIcon;
+elements.youtubeLogo.src = loadImage().youtubeIcon;
+elements.twitterLogo.src = loadImage().twitterIcon;
 
 // elements.eduVid.src = loadImage().eduVid;

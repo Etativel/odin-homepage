@@ -87,39 +87,6 @@ const animate = (() => {
 
     observer.observe(itemToLookAt);
   }
-
-  // function intersectionAnimate(
-  //   threshold,
-  //   itemToAnimate,
-  //   classname,
-  //   itemToLookAt
-  // ) {
-  //   const intersectionCallback = (entries) => {
-  //     for (const entry of entries) {
-  //       if (entry.isIntersecting) {
-  //         // Add the class to itemToAnimate when itemToLookAt is in view
-  //         if (Array.isArray(itemToAnimate)) {
-  //           itemToAnimate.forEach((item) => item.classList.add(classname));
-  //         } else {
-  //           itemToAnimate.classList.add(classname);
-  //         }
-  //       }
-  //     }
-  //   };
-
-  //   const observer = new IntersectionObserver(intersectionCallback, {
-  //     threshold: threshold,
-  //   });
-
-  //   // Handle single element or multiple elements for itemToLookAt
-  //   const elementsToObserve =
-  //     itemToLookAt instanceof Element ? [itemToLookAt] : itemToLookAt;
-
-  //   for (const item of elementsToObserve) {
-  //     observer.observe(item);
-  //   }
-  // }
-
   return {
     backgroundImage,
     textLoad,
