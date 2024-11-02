@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
     elements.header
   );
   animate.intersectionAnimateSingle(
-    0.6,
+    0.3,
     elements.skillsContainer,
     "skill-opacity",
     elements.skillsContainer
