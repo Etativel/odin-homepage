@@ -52,6 +52,8 @@ const animate = (() => {
       for (const entry of entries) {
         if (entry.isIntersecting) {
           entry.target.classList.add(`${classname}`);
+        } else {
+          entry.target.classList.remove(`${classname}`);
         }
       }
     };
@@ -77,6 +79,8 @@ const animate = (() => {
       for (const entry of entries) {
         if (entry.isIntersecting) {
           itemToAnimate.classList.add(`${classname}`);
+        } else {
+          itemToAnimate.classList.remove(classname);
         }
       }
     };

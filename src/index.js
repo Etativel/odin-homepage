@@ -46,11 +46,10 @@ attachImage.backgroundImage(elements.dummyProject02, loadImage().pixLab);
 attachImage.backgroundImage(elements.presentationC1, loadImage().presentation1);
 attachImage.backgroundImage(elements.presentationC2, loadImage().presentation2);
 
+// Attaching social media logo
 elements.instaLogo.src = loadImage().instagramIcon;
 elements.youtubeLogo.src = loadImage().youtubeIcon;
 elements.twitterLogo.src = loadImage().twitterIcon;
-
-// elements.eduVid.src = loadImage().eduVid;
 
 const addNavListeners = () => {
   const sections = {
