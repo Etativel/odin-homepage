@@ -17,11 +17,7 @@ const animate = (() => {
     }, duration);
   }
 
-  const textArray = [
-    "Graphic Designer",
-    "Front-end Developer",
-    "Tech Enthusiast",
-  ];
+  const textArray = ["Graphic Designer", "Front-end Developer", "Photographer"];
   let currentIndex = 0;
   const textElement = document.querySelector(".skills");
 

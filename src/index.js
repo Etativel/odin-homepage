@@ -18,6 +18,11 @@ const elements = {
   instaLogo: document.querySelector(".ig-logo"),
   twitterLogo: document.querySelector(".twit-logo"),
   youtubeLogo: document.querySelector(".ytube-logo"),
+  twitterFooter: document.querySelector(".f-twit-logo"),
+  youtubeFooter: document.querySelector(".f-ig-logo"),
+  instaFooter: document.querySelector(".f-ytube-logo"),
+  footerContainer: document.querySelector(".footer-container"),
+  contact: document.querySelector(".contact"),
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -35,6 +40,12 @@ document.addEventListener("DOMContentLoaded", () => {
     "translateX-transition",
     elements.eduTextContainer
   );
+  animate.intersectionAnimateSingle(
+    0.3,
+    elements.footerContainer,
+    "full-opacity",
+    elements.contact
+  );
   addNavListeners();
   // animate.textWave(document.querySelector(".sub-introduction"));
 });
@@ -50,6 +61,10 @@ attachImage.backgroundImage(elements.presentationC2, loadImage().presentation2);
 elements.instaLogo.src = loadImage().instagramIcon;
 elements.youtubeLogo.src = loadImage().youtubeIcon;
 elements.twitterLogo.src = loadImage().twitterIcon;
+
+// elements.instaFooter.src = loadImage().instagramIconBO;
+// elements.youtubeFooter.src = loadImage().youtubeIconBO;
+// elements.twitterFooter.src = loadImage().twitterIconBO;
 
 const addNavListeners = () => {
   const sections = {

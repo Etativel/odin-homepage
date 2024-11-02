@@ -9,6 +9,9 @@ import presentation2 from "../../assets/photos/presentation2.jpg";
 import youtubeIcon from "../../assets/icons/youtube.png";
 import twitterIcon from "../../assets/icons/twitter.png";
 import instagramIcon from "../../assets/icons/instagram.png";
+import youtubeIconBO from "../../assets/icons/youtube-black-outline.png";
+import twitterIconBO from "../../assets/icons/twitter-black-outline.png";
+import instagramIconBO from "../../assets/icons/instagram-black-outline.png";
 function loadImage() {
   const isHugeScreen = window.matchMedia("(min-width: 1500px)").matches;
   return {
@@ -21,6 +24,9 @@ function loadImage() {
     instagramIcon: instagramIcon,
     youtubeIcon: youtubeIcon,
     twitterIcon: twitterIcon,
+    instagramIconBO,
+    youtubeIconBO,
+    twitterIconBO,
   };
 }
 
