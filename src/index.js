@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "translateX-transition",
     elements.eduTextContainer
   );
+  addNavListeners();
   // animate.textWave(document.querySelector(".sub-introduction"));
 });
 
@@ -50,3 +51,20 @@ elements.youtubeLogo.src = loadImage().youtubeIcon;
 elements.twitterLogo.src = loadImage().twitterIcon;
 
 // elements.eduVid.src = loadImage().eduVid;
+
+const addNavListeners = () => {
+  const sections = {
+    skills: "home-nav",
+    education: "edu-nav",
+    projects: "work-nav",
+    contacts: "contact-nav",
+  };
+
+  Object.keys(sections).forEach((section) => {
+    document
+      .querySelector(`.${sections[section]}`)
+      .addEventListener("click", () => {
+        document.getElementById(section).scrollIntoView({ behavior: "smooth" });
+      });
+  });
+};
